@@ -29,6 +29,7 @@ public class AppOrderTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999");
     }
 
     @AfterEach
@@ -40,6 +41,7 @@ public class AppOrderTest {
 
     @Test
     public void test() {
+
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Осонова Алина");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+71231231231");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
