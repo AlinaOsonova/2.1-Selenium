@@ -40,7 +40,7 @@ public class AppOrderTest {
 
 
     @Test
-    public void test() {
+    public void cardOrderTest() {
 
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Осонова Алина");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+71231231231");
